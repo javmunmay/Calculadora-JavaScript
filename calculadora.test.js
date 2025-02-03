@@ -1,4 +1,4 @@
-const { suma, resta, multiplica, divide, raiz } = require('./calculadora');
+const { suma, resta, multiplica, divide, raiz, validatePassword } = require('./calculadora');
 
 
 test('Suma 2 + 3 y devuelve 5', () => {
@@ -19,4 +19,8 @@ test('Dividir 15 / 3 y devuelve 5', () => {
 
 test('raiz de 9 y devuelve 3', () => {
     expect(raiz(9)).toBe(3);
+});
+
+test('Validacion de contraseña', () => {
+    expect(ravalidatePasswordiz("9Mh@9Mh?"));
 });
