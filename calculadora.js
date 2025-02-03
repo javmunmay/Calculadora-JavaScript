@@ -8,5 +8,16 @@ function suma(a, b) {
     return a - b;
   }
   
+  function multiplica(a, b) {
+    return a * b;
+  }
   
-  module.exports = { suma, resta };
+  function divide(a, b) {
+    return a / b;
+  }
+
+  function raiz(a) {
+    return a * a;
+  }
+
+  module.exports = { suma, resta, multiplica, divide, raiz};
