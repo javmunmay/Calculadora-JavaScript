@@ -14,7 +14,7 @@ test('Multiplicar 5 * 3 y devuelve 15', () => {
 });
 
 test('Dividir 15 / 3 y devuelve 5', () => {
-    expect(divide(5, 3)).toBe(5);
+    expect(divide(15, 3)).toBe(5);
 });
 
 test('raiz de 3 y devuelve 9', () => {

@@ -17,7 +17,7 @@ function suma(a, b) {
   }
 
   function raiz(a) {
-    return a * a;
+    return Math.sqrt(a);
   }
 
   module.exports = { suma, resta, multiplica, divide, raiz};
