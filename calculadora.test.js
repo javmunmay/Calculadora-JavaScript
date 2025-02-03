@@ -22,5 +22,5 @@ test('raiz de 9 y devuelve 3', () => {
 });
 
 test('Validacion de contraseña', () => {
-    expect(ravalidatePasswordiz("9Mh@9Mh?"));
+    expect(validatePassword("9Mh@9Mh?"));
 });
