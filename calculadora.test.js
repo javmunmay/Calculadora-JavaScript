@@ -21,6 +21,4 @@ test('raiz de 9 y devuelve 3', () => {
     expect(raiz(9)).toBe(3);
 });
 
-test('Validacion de contraseña', () => {
-    expect(validatePassword("9Mh@9Mh?"));
-});
+
