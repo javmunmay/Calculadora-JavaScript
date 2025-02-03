@@ -17,6 +17,6 @@ test('Dividir 15 / 3 y devuelve 5', () => {
     expect(divide(15, 3)).toBe(5);
 });
 
-test('raiz de 3 y devuelve 9', () => {
-    expect(raiz(3)).toBe(9);
+test('raiz de 9 y devuelve 3', () => {
+    expect(raiz(9)).toBe(3);
 });
