@@ -1,4 +1,4 @@
-const { suma, resta, multiplica, divide, raiz, validatePassword } = require('./calculadora');
+const { suma, resta, multiplica, divide, raiz} = require('./calculadora');
 
 
 test('Suma 2 + 3 y devuelve 5', () => {
