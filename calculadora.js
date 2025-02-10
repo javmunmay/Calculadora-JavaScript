@@ -1,36 +1,17 @@
-// calculadora.js
-
 function suma(a, b) {
   return a + b;
-}
-
-function resta(a, b) {
+ }
+ function resta(a, b) {
   return a - b;
-}
-
-function multiplica(a, b) {
+ }
+ function multiplicar(a, b) {
   return a * b;
-}
-
-function divide(a, b) {
-  if (b === 0) return Infinity;
+ }
+ function dividir(a, b) {
+  if (b === 0) {
+  throw new Error("No se puede dividir por cero");
+  }
   return a / b;
-}
-
-function raiz(a) {
-  return Math.sqrt(a);
-}
-
-// Exportar funciones para Node.js (Jest)
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = { suma, resta, multiplica, divide, raiz };
-}
-
-// Hacer las funciones accesibles en el navegador
-if (typeof window !== "undefined") {
-  window.suma = suma;
-  window.resta = resta;
-  window.multiplica = multiplica;
-  window.divide = divide;
-  window.raiz = raiz;
-}
+ }
+ // Hacer las funciones accesibles en el navegador
+ module.exports = { suma, resta, multiplicar, dividir };
