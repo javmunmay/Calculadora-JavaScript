@@ -22,3 +22,9 @@ function raiz(a) {
 
 
 module.exports = { suma, resta, multiplica, divide, raiz};
+
+// Hacer las funciones accesibles en el navegador
+window.suma = suma;
+window.resta = resta;
+window.multiplicar = multiplicar;
+window.dividir = dividir;
