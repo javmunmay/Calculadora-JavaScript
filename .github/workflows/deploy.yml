@@ -1,10 +1,11 @@
-name: Despliegue en GitHub Pages
+name: Integración Continua
 
 on: [push, pull_request]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Clonar el repositorio
         uses: actions/checkout@v3
@@ -15,14 +16,13 @@ jobs:
           node-version: 18
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci  # Usar "npm ci" en lugar de "npm install" para asegurar un entorno limpio
 
-      - name: Dar permisos a Jest
-        run: chmod +x node_modules/.bin/jest
-
+      - name: Verificar instalación de Jest
+        run: npx jest --version  # Comprueba que Jest está instalado correctamente
 
       - name: Ejecutar pruebas
-        run: npm jest
+        run: npm test  # Usa el script definido en "package.json"
 
   deploy:
     needs: test
@@ -31,9 +31,9 @@ jobs:
       - name: Clonar el repositorio
         uses: actions/checkout@v3
 
-      - name: Crear carpeta de despliegue
+      - name: Crear la carpeta de despliegue
         run: |
-          mkdir public
+          mkdir -p public
           cp index.html public/
           cp calculadora.js public/
 
