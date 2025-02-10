@@ -13,6 +13,7 @@ function multiplica(a, b) {
 }
 
 function divide(a, b) {
+  if (b === 0) return Infinity;
   return a / b;
 }
 
@@ -20,11 +21,16 @@ function raiz(a) {
   return Math.sqrt(a);
 }
 
-
-module.exports = { suma, resta, multiplica, divide, raiz};
+// Exportar funciones para Node.js (Jest)
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { suma, resta, multiplica, divide, raiz };
+}
 
 // Hacer las funciones accesibles en el navegador
-window.suma = suma;
-window.resta = resta;
-window.multiplicar = multiplicar;
-window.dividir = dividir;
+if (typeof window !== "undefined") {
+  window.suma = suma;
+  window.resta = resta;
+  window.multiplica = multiplica;
+  window.divide = divide;
+  window.raiz = raiz;
+}
